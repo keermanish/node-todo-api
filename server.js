@@ -17,6 +17,12 @@ app.get('/about', (req, res) => {
   });
 });
 
+app.get('/home', (req, res) => {
+  res.render('home.hbs', {
+    pageTitle: 'Home Page'
+  });
+});
+
 app.get('/bad', (req, res) => {
   res.send({
     errorMessage: 'Bad Request'
